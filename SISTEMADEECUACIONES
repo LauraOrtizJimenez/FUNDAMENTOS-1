@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float A,B,C,x,y,D,F,E,determinante;
+    cout<<"Introduce los valores de la primera ecuacion (Ax+By=C): "<<endl;
+    cin>>A>>B>>C;
+    cout<<"Introduce los valores de la segunda ecuacion (Dx+Ey=f): "<<endl;
+    cin>>D>>E>>F;
+    determinante=(A*E)-(D*B);
+    if (determinante==0)
+    {
+        cout<<"No tiene una solucion unica";
+        if ((A/D==B/E)&&(B/E==C/F))
+        {
+            cout<<"Las ecuaciones son coincidientes"<<endl;
+        }
+        else
+            cout<<"Las ecuaciones son paralelas"<<endl;
+    } 
+    else 
+        x=((C*E)-(F*B))/determinante;
+        y=((A*F)-(D*C))/determinante;
+        cout<<"La solucion seria: "<<endl;
+        cout<<"x= "<<x<<" y y= "<<y;
+    return 0;
+    
+}
