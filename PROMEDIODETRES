@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int n1,n2,n3;
+    float p;
+    string input;
+    cout<<"Ingrese valores entre 0 y 10 incluyendolos: "<<endl;
+    cout<<"Ingrese el primer valor: ";
+    cin>>n1;
+    if ((n1>=0)&&(n1<=100))
+    {
+        cout<<"Ingrese el segundo valor: ";
+        cin>>n2;
+        if ((n2>=0)&&(n2<=10))
+        {
+            cout<<"Ingrese el tercer valor: ";
+            cin>>n3;
+            if ((n3>=0)&&(n3<=10))
+            {
+                p=(n1+n2+n3)/3.10;
+                cout<<"El promedio es: "<<p;
+            }
+            else 
+            cout<<"El valor no esta dentro del rango";
+        }
+        else
+        cout<<"El valor no esta dentro del rango";
+    }
+    else 
+    cout<<"El valor no esta dentro del rango";
+    return 0;
+}
