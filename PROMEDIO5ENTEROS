@@ -1,0 +1,23 @@
+#include <iostream>
+int main()
+{
+    int numero,suma=0;
+    cout<<"Ingrese el primer numero: ";
+    cin>>numero;
+    suma=numero;
+    cout<<"Ingrese el segundo numero: ";
+    cin>>numero;
+    suma=suma+numero;
+    cout<<"Ingrese el tercer numero: ";
+    cin>>numero;
+    suma=suma+numero;
+    cout<<"Ingrese el cuarto numero: ";
+    cin>>numero;
+    suma=suma+numero;
+    cout<<"Ingrese el quinto numero: ";
+    cin>>numero;
+    suma=suma+numero;
+    suma=suma/5;
+    cout<<"El promedio de esos cinco valores enteros es: "<<suma;
+    return 0;   
+}
