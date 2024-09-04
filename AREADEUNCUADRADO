@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float area, a;
+    cout<<"Ingresa un lado del cuadrado: ";
+    cin>>a;
+    area=a*a;
+    cout<<"El Area del cuadrado es: "<<area;
+    return 0;
+}
