@@ -1,0 +1,46 @@
+#include <iostream>
+#include <math.h>
+#include <complex>
+using namespace std;
+int main()
+{
+    float a,b,c,x1,x2,d,real,imaginario;
+    cout<<"Ingresar el primer numero (a): ";
+    cin>>a;
+    cout<<"Ingresar el segundo numero (b): ";
+    cin>>b;
+    cout<<"Ingresar el tercer numero (c): ";
+    cin>>c;
+    d=((b*b)-(4*a*c));
+    if (d>0)
+    {
+        x1=(-b+sqrt(d))/(2*a);
+        x2=(-b-sqrt(d))/(2*a);
+        cout<<"X1 seria: "<<x1<<endl;
+        cout<<"X2 seria: "<<x2<<endl;
+    }
+    else 
+        if (d==0)
+        {
+            x1=(-b+sqrt(d))/(2*a);
+            cout<<"X1 y X2 serian: "<<x1<<endl;
+        }
+        else 
+            if (d<0)
+            {
+                real=(-b)/(2*a);
+                imaginario=(sqrt((d)*-1))/(2*a);
+                cout<<"La ecuacion es compleja"<<endl;
+                if (real==0)
+                {
+                    cout<<"x1 es: "<<"+"<<imaginario<<"i"<<endl;
+                    cout<<"x2 es: "<<"-"<<imaginario<<"i"<<endl;
+                }
+                else 
+                {
+                    cout<<"x1 es: "<<real<<"+"<<imaginario<<"i"<<endl;
+                    cout<<"x2 es: "<<real<<"-"<<imaginario<<"i"<<endl;
+                }
+            }
+    return 0;
+}
