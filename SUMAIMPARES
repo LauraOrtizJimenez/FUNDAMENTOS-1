@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int contador=1, suma=0,n;
+    cout<<"Ingrese un unmero natural mayor a 1: ";
+    cin>>n;
+    while (contador<=n)
+    {
+        suma=suma+contador;
+        contador=contador+2;
+    }
+    cout<<"La suma de los numeros impares es de: "<<suma;
+    return 0;   
+}
