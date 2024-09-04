@@ -1,0 +1,40 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+using namespace std;
+int main()
+{
+    float P;
+    cout<<"Ingresar el peso de la carta en gramos: ";
+    cin>>P;
+    if ((P<50)&&(P>0))
+    {
+        cout<<"El costo de la carta seria: Bs.1.50";
+    }
+    else 
+        if ((P<=100)&&(P>50))
+        {
+            cout<<"El costo de la carta seria: Bs.4.00";
+        }
+        else 
+            if ((P<=200)&&(P>100))
+            {
+            cout<<"El costo de la carta seria: Bs.6.00";
+            }
+            else 
+                if ((P<=350)&&(P>200))
+                {
+                    cout<<"El costo de la carta seria: Bs.10.50";
+                }
+                else
+                    if ((P<=500)&&(P>350))
+                    {
+                        cout<<"El costo de la carta seria: Bs.15.00";
+                    }
+                    else
+                        if (P>500)
+                        {
+                            cout<<"NO PUEDE ENVIAR COMO CARTA";
+                        }
+    return 0;
+}
