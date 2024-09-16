@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float saldo,antiguedad;
+    do{
+    cout<<"Ingresar el saldo promedio: "<<endl;
+    cin>>saldo;
+    cout<<"Ingresar antiguedad: "<<endl; 
+    cin>>antiguedad;
+    }while ((antiguedad<0)||(saldo<1));
+    if (antiguedad>3)
+    {
+        if (saldo>5000)
+        {
+            cout<<"La tasa de interes es del 3%"<<endl;
+        }
+        else 
+        cout<<"La tasa de interes es del 2%"<<endl;
+    }
+    else
+    if (saldo>5000)
+    {
+        cout<<"La tasa es del 2,5%"<<endl;
+    }
+    else 
+    cout<<"La tasa es del 1,5%"<<endl; 
+    
+    return 0;
+}
