@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float litros,litros2,litros3,precio,precio2,precio3,ingreso1,ingreso2,ingreso3,ingresototal;
+    cout<<"cuantos litros de gasolina se vendieron: "<<endl;
+    cin>>litros;
+    cout<<"A que precio se vendio: "<<endl;
+    cin>>precio;
+    cout<<"cuantos litros de diesel se vendieron: "<<endl;
+    cin>>litros2;
+    cout<<"A que precio se vendio: "<<endl;
+    cin>>precio2;
+    cout<<"cuantos litros de etanol se vendieron: "<<endl;
+    cin>>litros3;
+    cout<<"A que precio se vendio: "<<endl;
+    cin>>precio3;
+    ingreso1=litros*precio;
+    ingreso2=litros2*precio2;
+    ingreso3=litros3*precio3;
+    ingresototal=ingreso1+ingreso2+ingreso3;
+    cout<<"El total de ingreso es de: "<<ingresototal<<endl;
+    return 0;
+}
