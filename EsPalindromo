@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+//Autor: Laura Ortiz
 using namespace std;
 bool espalindromo(string palabra);
 int main()
