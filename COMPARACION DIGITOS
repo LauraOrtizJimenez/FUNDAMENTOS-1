@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+void comparacion(int n);
+
+
+int main() {
+	int numero;
+
+	
+	do {
+	cout << "Ingrese el numero a comparar: ";
+		cin >> numero;
+	} while (numero < 0);
+	comparacion(numero);
+	return 0;
+}
+
+void comparacion(int n) {
+	int digito1, digito2,numeroinvertido=0,i,diferencia;
+	
+	i = n;
+	while (i>0) {
+		digito1 = i % 10;
+		numeroinvertido = (numeroinvertido * 10) + digito1;
+		i = i / 10;
+	}
+	i = n;
+	while (numeroinvertido > 0 && i > 0) {
+		digito1 = i % 10;
+		digito2 = numeroinvertido % 10;
+		if (digito1 != digito2) {
+			diferencia = digito1 - digito2;
+			diferencia = abs(diferencia);
+			cout << "La diferencia entre " << digito1 << " y " << digito2 << " es: " << diferencia << endl;
+		}
+		numeroinvertido=numeroinvertido/10;
+		i = i / 10;
+	}
+
+
+}
