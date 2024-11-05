@@ -1,0 +1,50 @@
+#include <iostream>
+#define MAX 100
+using namespace std;
+void cargar(int num[],string nombre[],int n);
+void mostrar(int num[],string nombre[],int n);
+void burbuja (int num[],string nombre[],int n);
+int main()
+{
+    int num[MAX],n;
+    string nombre[MAX];
+    do{
+        cout<<"Ingrese la cantidad de personas que se van a registrar: ";
+        cin>>n;
+    }while(n<=0||n>100);
+    cargar(num, nombre, n);
+    burbuja(num, nombre, n);
+    mostrar(num, nombre, n);
+    return 0;
+}
+void cargar(int num[],string nombre[],int n){
+    for(int i=0;i<n;i++){
+        cout<<"Ingrese su nombre (Nombre y apellido)"<<endl;
+        cin.ignore();
+        getline(cin,nombre[i]);
+        cout<<"Ingrese su numero de celular: "<<endl;
+        cin>>num[i];
+    }
+}
+void mostrar(int num[],string nombre[],int n){
+    cout<<"Nombre y apellido"<<"    "<<"Numero"<<endl;
+    for(int i=0;i<n;i++){
+        cout<<nombre[i]<<"      "<<num[i]<<endl;
+    }
+}
+void burbuja (int num[],string nombre[],int n){
+    string orden;
+    int aux;
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(nombre[i]>nombre[j]){
+                orden=nombre[i];
+                nombre[i]=nombre[j];
+                nombre[j]=orden;
+                aux=num[i];
+                num[i]=num[j];
+                num[j]=aux;
+            }
+        }
+    }
+}
